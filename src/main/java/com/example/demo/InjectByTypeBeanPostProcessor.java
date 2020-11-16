@@ -1,9 +1,9 @@
 package com.example.demo;
 
 import lombok.SneakyThrows;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.context.ApplicationContext;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -11,7 +11,8 @@ import java.util.List;
 
 public class InjectByTypeBeanPostProcessor<T> implements BeanPostProcessor {
     @Autowired
-    private  ApplicationContext context;
+    private  BeanFactory context;
+
 
     @SneakyThrows
     @Override
